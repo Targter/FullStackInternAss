@@ -67,54 +67,92 @@ This project is a web-based application that allows users to manage their availa
    cd your-repository
 
 
-Install backend dependencies:
+# Project Setup
 
-bash
-Copy code
-cd backend
-npm install
-Backend Dependencies:
+## Backend Setup
 
-express: Web framework for Node.js
-mongoose: MongoDB object modeling tool
-cors: Middleware for handling CORS
-dotenv: Loads environment variables from a .env file
-body-parser: Middleware for parsing request bodies
-Install frontend dependencies:
+1. **Navigate to the backend directory:**
+    ```bash
+    cd backend
+    ```
 
-bash
-Copy code
-cd ../frontend
-npm install
-Frontend Dependencies:
+2. **Install backend dependencies:**
+    ```bash
+    npm install
+    ```
 
-react: JavaScript library for building user interfaces
-axios: Promise-based HTTP client for making requests
-react-dom: Provides DOM-specific methods for React
-react-scripts: Scripts and configuration used by Create React App
-Configuration
-Backend:
+   **Backend Dependencies:**
+   - `express`: Web framework for Node.js
+   - `mongoose`: MongoDB object modeling tool
+   - `cors`: Middleware for handling CORS
+   - `dotenv`: Loads environment variables from a .env file
+   - `body-parser`: Middleware for parsing incoming requests
 
-Create a .env file in the backend directory and add the following variables:
-bash
-Copy code
-MONGO_URI=mongodb://localhost:27017/your-database
-PORT=5000
-Replace mongodb://localhost:27017/your-database with your MongoDB connection string.
-Frontend:
+3. **Create a `.env` file:**
 
-No additional configuration is required for the frontend.
-Running the Application
-Start the backend server:
+   Inside the `backend` directory, create a `.env` file and add the following variables:
+    ```env
+    MONGO_URI=mongodb://localhost:27017/your-database
+    PORT=5000
+    ```
+   Replace `mongodb://localhost:27017/your-database` with your MongoDB connection string.
 
-bash
-Copy code
-cd backend
-npm start
-Start the frontend application:
+4. **Run the backend server:**
+    ```bash
+    npm start
+    ```
+   The backend will run on [http://localhost:5000](http://localhost:5000).
 
-bash
-Copy code
-cd ../frontend
-npm run dev
-The frontend will be available at http://localhost:3000 and the backend API at http://localhost:5000.
+## Frontend Setup
+
+1. **Navigate to the frontend directory:**
+    ```bash
+    cd ../frontend
+    ```
+
+2. **Install frontend dependencies:**
+    ```bash
+    npm install
+    ```
+
+   **Frontend Dependencies:**
+   - `react`: JavaScript library for building user interfaces
+   - `axios`: Promise-based HTTP client for making HTTP requests
+   - `react-dom`: Provides DOM-specific methods for React
+   - `react-scripts`: Scripts and configuration used by Create React App
+
+3. **Run the frontend:**
+    ```bash
+    npm run dev
+    ```
+   The frontend will be available at [http://localhost:3000](http://localhost:3000).
+
+## Running the Application
+
+To run the full stack:
+
+1. **Start the backend (if not already running):**
+    ```bash
+    cd backend
+    npm start
+    ```
+
+2. **Start the frontend:**
+    ```bash
+    cd ../frontend
+    npm run dev
+    ```
+
+   You can access the application at:
+   - [http://localhost:3000](http://localhost:3000) for the frontend
+   - [http://localhost:5000](http://localhost:5000) for the backend API.
+
+## Features
+
+- **Users:** Can manage their availability by adding, viewing, and deleting slots.
+- **Admins:** Can schedule meetings for users based on their availability.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
